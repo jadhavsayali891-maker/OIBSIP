@@ -1,58 +1,71 @@
-# Car Price Prediction with Machine Learning
+# Email Spam Detection with Machine Learning
 
 ## About the Project
-This is my third project for the Oasis Infobyte Data Science Internship.
 
-In this project, I worked on predicting the selling price of used cars using machine learning. I used car details like present price, kilometres driven, fuel type, transmission and car age to build prediction models.
+This project is part of my **Oasis Infobyte Data Science Internship (OIBSIP)**.
 
-## Tools I Used
+The main aim of this project is to identify whether an SMS message is spam or genuine (ham) using machine learning. I used the SMS Spam Collection dataset, which contains messages labelled as spam or ham.
+
+## Objective
+
+To build a machine learning model that can classify SMS messages into two categories:
+
+- **Spam:** Unwanted or promotional messages.
+- **Ham:** Genuine messages.
+
+## Technologies Used
+
 - Python
+- Jupyter Notebook
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- Jupyter Notebook
+- Regular Expressions (re)
+- WordCloud
 
 ## Dataset
-I used the CarDekho car dataset. It contains information about used cars, including their year, selling price, present price, kilometres driven, fuel type, seller type, transmission and previous owners.
 
-After removing duplicate records, the dataset contained 299 rows.
+I used the SMS Spam Collection dataset.
 
-## What I Did
-1. Loaded the car dataset and checked its details.
-2. Checked missing values and duplicate records.
-3. Removed duplicate rows and cleaned categorical values.
-4. Created a new feature called `Car_Age`.
-5. Extracted the car brand from the car name.
-6. Created graphs to understand car prices and other features.
-7. Used One-Hot Encoding for categorical data.
-8. Created a correlation heatmap.
-9. Divided the data into training and testing sets.
-10. Trained Linear Regression and Random Forest models.
-11. Compared the models using MAE, RMSE and R² score.
-12. Compared feature contributions using a chart.
+The dataset contains **5,572 messages**:
 
-## Model Results
+- Ham messages: 4,825
+- Spam messages: 747
 
-| Model | MAE | RMSE | R² Score |
-|---|---:|---:|---:|
-| Linear Regression | 1.35 | 2.39 | 0.78 |
-| Random Forest | 1.33 | 3.20 | 0.60 |
+## Project Steps
 
-Linear Regression performed better overall based on its RMSE and R² score. Random Forest had a slightly lower MAE.
+1. Loaded the SMS Spam Collection dataset.
+2. Checked the number and percentage of spam and ham messages.
+3. Cleaned the text by converting it to lowercase and removing punctuation, numbers and selected common words.
+4. Used TF-IDF to convert text messages into numerical features.
+5. Divided the dataset into 80% training data and 20% testing data.
+6. Trained two machine learning models:
+   - Multinomial Naive Bayes
+   - Logistic Regression
+7. Evaluated both models using accuracy, precision, recall and F1-score.
+8. Created confusion matrices and WordCloud visualisations.
 
-## What I Learned
-Through this project, I learned how to prepare data for machine learning, create new features, encode categorical values and train regression models. I also learned how to compare models using different evaluation metrics.
+## Model Performance
 
-## How to Run
-1. Install Python and Jupyter Notebook.
-2. Install the required libraries:
+The following results were obtained on the test dataset:
 
-   `pip install pandas numpy matplotlib seaborn scikit-learn`
+| Model | Accuracy | Precision (Spam) | Recall (Spam) | F1-Score (Spam) |
+|---|---:|---:|---:|---:|
+| Multinomial Naive Bayes | 96% | 1.00 | 0.70 | 0.83 |
+| Logistic Regression | 97% | 1.00 | 0.74 | 0.85 |
 
-3. Keep `car data.csv` in the project folder.
-4. Open `Car_Price_Prediction.ipynb`.
-5. Run the notebook cells one by one.
+## Conclusion
 
-**Internship:** Oasis Infobyte – Data Science Internship (OIBSIP)
+In this project, I successfully developed a machine learning system to identify spam and genuine SMS messages.
+
+Both models performed well, but Logistic Regression gave slightly better results with 97% accuracy and a spam F1-score of 0.85.
+
+Through this project, I learned about text preprocessing, TF-IDF feature extraction, model training and evaluation. I also understood why recall is important when identifying spam messages.
+
+## Internship
+
+**Oasis Infobyte – Data Science Internship (OIBSIP)**
+
+**Task 4: Email Spam Detection with Machine Learning**
