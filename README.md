@@ -1,66 +1,118 @@
-# Iris Flower Classification
+## Task 2: Unemployment Analysis with Python
 
-## About the Project
+### 1. Project Overview
+This project focuses on analysing unemployment data in India using Python. Exploratory Data Analysis (EDA) is performed to understand unemployment trends across different states and months, with special attention to the COVID-19 period.
 
-This is my first project for the Oasis Infobyte Data Science Internship.
+### 2. Objective
+The main objectives of this project are:
+- Analyse unemployment rates across different regions of India.
+- Identify monthly unemployment trends.
+- Compare unemployment rates before and during the COVID-19 period.
+- Visualise the data using different charts.
+- Understand how unemployment changed during the COVID-19 period.
 
-In this project, I used Machine Learning to identify the type of Iris flower based on its measurements. The dataset contains three types of flowers: Setosa, Versicolor and Virginica.
-
-## Tools I Used
-
+### 3. Technologies Used
 - Python
-- Pandas and NumPy
-- Matplotlib and Seaborn
-- Scikit-learn
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
 - Jupyter Notebook
 
-## Dataset
+### 4. Dataset
+**Dataset Name:** Unemployment in India.csv
 
-I used the Iris dataset available in Scikit-learn.
+The dataset contains information about:
+- Region
+- Date
+- Frequency
+- Estimated Unemployment Rate (%)
+- Estimated Employed
+- Estimated Labour Participation Rate (%)
+- Area (Rural/Urban)
 
-It contains 150 flower samples with four measurements:
+After removing completely empty rows, the dataset contains **740 records and 7 columns** with no missing values.
 
-- Sepal Length
-- Sepal Width
-- Petal Length
-- Petal Width
+### 5. Project Workflow
 
-## What I Did
+**Step 1: Data Loading**
+- Imported the required Python libraries.
+- Loaded the CSV dataset using Pandas.
+- Displayed the first five rows.
 
-1. Loaded the Iris dataset.
-2. Checked the data and studied its features.
-3. Created graphs to understand the data.
-4. Selected the important features.
-5. Divided the data into training and testing sets.
-6. Trained three Machine Learning models.
-7. Compared their results to find the best model.
+**Step 2: Data Cleaning and EDA**
+- Checked dataset shape and column names.
+- Converted the Date column into datetime format.
+- Converted numerical columns into numeric data types.
+- Removed completely empty rows.
+- Checked missing values and descriptive statistics.
 
-## Models Used
+**Step 3: Region-wise Analysis**
+- Calculated the average unemployment rate for each region.
+- Sorted regions from highest to lowest unemployment rate.
 
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Decision Tree
+**Step 4: Monthly Analysis**
+- Extracted month and year from the Date column.
+- Calculated the monthly average unemployment rate.
+- Identified changes in unemployment over time.
 
-## Results
+**Step 5: Data Visualisation**
+The project includes visualisations such as:
+- Monthly unemployment trend line chart.
+- State-wise unemployment trend line chart for Maharashtra, Uttar Pradesh and West Bengal.
+- Bar chart showing the top 10 regions with the highest average unemployment rate.
+- Correlation heatmap of employment indicators.
+- Pre-COVID and COVID-period comparison chart.
 
-| Model | Accuracy |
-|---|---:|
-| Logistic Regression | 96.67% |
-| KNN | 100% |
-| Decision Tree | 93.33% |
+**Step 6: COVID-19 Impact Analysis**
+- Divided the dataset into pre-COVID and COVID periods.
+- Calculated the average unemployment rate for both periods.
+- Compared the results to understand the change.
 
-KNN gave the best result with 100% accuracy on the test data.
+### 6. Key Findings
 
-## How to Run
+- Tripura recorded the highest average unemployment rate of approximately **28.35%**.
+- Haryana recorded the second-highest average unemployment rate of approximately **26.28%**.
+- Meghalaya recorded the lowest average unemployment rate of approximately **4.80%**.
+- The monthly average unemployment rate reached approximately **24.88% in May 2020**.
+- The average unemployment rate before COVID-19 was **9.51%**.
+- The average unemployment rate during the COVID period was **17.77%**.
+- The analysis shows a significant increase in unemployment during the COVID period.
+
+### 7. Conclusion
+This project helped analyse unemployment trends across different regions of India using Python. Data cleaning, exploratory data analysis and visualisation were used to understand regional differences and monthly changes.
+
+The comparison between pre-COVID and COVID-period unemployment rates showed an increase from 9.51% to 17.77%. The findings highlight the major changes in unemployment during the COVID-19 period.
+
+Overall, this project demonstrates the use of Python libraries for analysing real-world datasets and presenting meaningful insights through visualisations.
+
+### 8. How to Run the Project
 
 1. Install Python and Jupyter Notebook.
 2. Install the required libraries:
-   `pip install pandas numpy matplotlib seaborn scikit-learn`
-3. Open the notebook named `Iris_Flower_Classification.ipynb`.
-4. Run the cells one by one.
 
-## What I Learned
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
 
-Through this project, I learned how to work with a dataset, create graphs, train different Machine Learning models and compare their accuracy.
+3. Keep the dataset and notebook in the same project folder.
+4. Open Jupyter Notebook.
+5. Open `Unemployment_Analysis.ipynb`.
+6. Run the notebook cells from top to bottom.
 
-**Internship:** Oasis Infobyte – Data Science Internship (OIBSIP)
+### 9. Project Files
+
+```text
+DataScience-Task2-UnemploymentAnalysis/
+│
+├── Unemployment_Analysis.ipynb
+├── Unemployment in India.csv
+└── README.md
+```
+
+### 10. Internship Details
+
+**Internship:** Oasis Infobyte (OIBSIP)  
+**Domain:** Data Science  
+**Task:** Task 2 – Unemployment Analysis with Python
+
